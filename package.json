@@ -1,0 +1,22 @@
+{
+  "name": "crm",
+  "version": "1.0.0",
+  "description": "crm backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derrickmstrong/nodeexpress_crm.git"
+  },
+  "author": "D.Strong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derrickmstrong/nodeexpress_crm/issues"
+  },
+  "homepage": "https://github.com/derrickmstrong/nodeexpress_crm#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
