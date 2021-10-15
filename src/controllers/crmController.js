@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { ContactSchema } from '../models/crmModel';
 
-const Contact = mongoose.model('Conact', ContactSchema);
+const Contact = mongoose.model('Contact', ContactSchema);
 
 // Create
 export const addNewContact = (req, res) => {
@@ -20,3 +20,5 @@ export const getContacts = (req, res) => {
     res.json(contact);
   });
 };
+
+// Update
