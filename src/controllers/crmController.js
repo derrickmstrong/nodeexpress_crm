@@ -15,7 +15,7 @@ export const addNewContact = (req, res) => {
 
 // Read
 export const getContacts = (req, res) => {
-    Contact.find({}, (err, contact) => {
+  Contact.find({}, (err, contact) => {
     if (err) return res.send(err);
     res.json(contact);
   });
@@ -26,4 +26,17 @@ export const getContactById = (req, res) => {
     if (err) return res.send(err);
     res.json(contact);
   });
+};
+
+// Update
+export const updateContact = (req, res) => {
+  Contact.findOneAndUpdate(
+    { _id: req.params.id },
+    req.body,
+    { new: true, useFindAndModify: false },
+    (err, contact) => {
+      if (err) return res.send(err);
+      res.json(contact);
+    }
+  );
 };
