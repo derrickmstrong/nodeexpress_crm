@@ -12,7 +12,7 @@ const routes = app => {
 
   app
     .route('/contacts/:id')
-    .get(getContactById)
+    .get(getContactById) // Get contact BY ID 
     .put((req, res) => {
       res.send('PUT request successful');
     })
