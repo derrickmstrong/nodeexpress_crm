@@ -21,4 +21,9 @@ export const getContacts = (req, res) => {
   });
 };
 
-// Update
+export const getContactById = (req, res) => {
+  Contact.findById(req.params.id, (err, contact) => {
+    if (err) return res.send(err);
+    res.json(contact);
+  });
+};
