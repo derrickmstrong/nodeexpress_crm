@@ -1,19 +1,9 @@
-import { addNewContact } from '../controllers/crmController';
+import { addNewContact, getContacts } from '../controllers/crmController';
 
 const routes = app => {
   app
     .route('/contacts')
-    .get(
-      (req, res, next) => {
-        // middleware
-        console.log(`Request from: ${req.originalUrl}`);
-        console.log(`Request type: ${req.method}`);
-        next();
-      },
-      (req, res, next) => {
-        res.send('GET request successful');
-      }
-    )
+    .get(getContacts) // Get ALL contacts
     .post(addNewContact); // Add new contact to database
 
   app
