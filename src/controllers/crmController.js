@@ -40,3 +40,11 @@ export const updateContact = (req, res) => {
     }
   );
 };
+
+// Delete
+export const deleteContact = (req, res) => {
+  Contact.remove({ _id: req.params.id }, err => {
+    if (err) return res.send(err);
+    res.send({ message: 'Successfully deleted contact' });
+  });
+};
