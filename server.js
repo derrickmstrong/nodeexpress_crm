@@ -9,7 +9,7 @@ const app = express(),
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/CRMdb', {
   useNewUrlParser: true,
-  useUnifiedToplogy: true,
+  useUnifiedTopology: true,
 });
 
 // Setup bodyParser
